@@ -1,0 +1,15 @@
+precision mediump float;  
+
+attribute vec3 position;
+// attribute vec2 uv;
+
+// attribute float opacity;
+
+// varying float alpha;
+// varying vec2 vUv;
+
+void main() {
+    // vUv = uv;
+
+    gl_Position = vec4(position, 1.0);
+}
