@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    // Redirect any invalid route to the index.html base path
+    const basePath = "/Dec2015Racer/web.archive.org/";
+    const defaultRoute = "#home"; // Add a default route if necessary
+
+    // Check if the current path matches the base path
+    if (!window.location.pathname.startsWith(basePath)) {
+      const newURL = window.location.origin + basePath + defaultRoute;
+      window.location.replace(newURL);
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
