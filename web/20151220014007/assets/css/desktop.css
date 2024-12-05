@@ -201,9 +201,39 @@ body > .share-prompt{ font-size: 18px; }
 .mute-prompt.active .muted { display: block; }
 .snow .mute-prompt .icons { color: rgba(0,0,0,0.8); }
 
-.logo-delahaye { position: absolute; top: 30px; left: 50%; margin-left: -53px; z-index: 1; width: 106px; }
+/* .logo-delahaye { position: absolute; top: 30px; left: 50%; margin-left: -53px; z-index: 1; width: 106px; }
 .logo-delahaye img { width: 100%; display: block; }
-.logo-delahaye .subtitle { letter-spacing: 1.4em; font-size: 7px; margin-top: 8px; color: #fff; text-align: center; padding-left: 0.8em;}
+.logo-delahaye .subtitle { letter-spacing: 1.4em; font-size: 7px; margin-top: 8px; color: #fff; text-align: center; padding-left: 0.8em;} */
+.logo-delahaye {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the container horizontally */
+    z-index: 1;
+    /* Removed fixed width to allow flexibility */
+}
+
+.logo-delahaye img {
+    /* width: 100%; */
+    width: 106px; 
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-delahaye .subtitle-link {
+    display: block;
+    text-align: center;
+    text-decoration: none; /* Removes the underline from the link */
+    margin-top: 8px;
+}
+
+.logo-delahaye .subtitle-link .subtitle {
+    display: inline-block;
+    letter-spacing: 0.1em; /* Adjusted for better readability */
+    font-size: 14px; /* Increased font size for visibility */
+    color: #fff;
+    white-space: nowrap; /* Prevents the text from wrapping to the next line */
+}
 .logo-delahaye .black { display: none; }
 .snow .logo-delahaye img { display: none; }
 .snow .logo-delahaye .black { display: block; }
@@ -212,6 +242,35 @@ body > .share-prompt{ font-size: 18px; }
 body > .share-container { position: absolute; left: 40px; top: 80px; font-size: 12px; z-index: 1; }
 body > .share-container .share { color: #fff; text-decoration: none; overflow: hidden; display: block; text-align: center; width: 50px; }
 body > .share-container .share .icons { font-size: 20px; line-height: 50px; }
+
+.twitter-share-container {
+    position: fixed;
+    top: 20px;       /* Distance from the top */
+    right: 20px;     /* Distance from the right */
+    z-index: 1000;   /* Keeps it above other elements */
+}
+
+
+/* Style for the Twitter Share Link */
+.twitter-share-container .twitter-share {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;                    /* Width of the circle */
+    height: 60px;                   /* Height of the circle */
+    border-radius: 50%;             /* Makes it circular */
+    text-decoration: none;          /* Removes underline */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.twitter-share-container .twitter-share .icons { font-size: 30px; line-height: 50px; }
+
+/* Style for the FontAwesome Twitter Icon */
+.twitter-share-container .twitter-share .fa-twitter {
+    color: #ffffff;   /* White color for the icon */
+    font-size: 20px;  /* Size of the icon */
+}
+
 
 /* ===// Connection //======================================================= */
 
@@ -488,7 +547,7 @@ body > .share-container .share .icons { font-size: 20px; line-height: 50px; }
 .score-list .user-listing .enter-name { display: inline-block; border: none; background: transparent; color: #fff; margin: 0; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3em; font-weight: normal; padding: 9px 20px;}
 .score-list .save-prompt { position: absolute; right: 0; top: 0; color: #e62043; background: #fff; padding: 0 24px; cursor: pointer;}
 
-.top-players { background: #000 url(web/20160112204539/assets/img/img-top5_bg.jpg); background-size: cover;}
+.top-players { background: #000 url('../img/img-top5_bg.jpg'); background-size: cover;}
 .top-players .content-block { height: 470px; margin: auto; }
 .top-players .head { font-size: 36px; letter-spacing: 0.3em; line-height: 1.2em; text-indent: 0.3em;}
 .top-players .subtitle { font-size: 12px; line-height: 1.5em; margin-bottom: 30px; letter-spacing: 0.4em;}
