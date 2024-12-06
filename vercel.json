@@ -1,14 +1,7 @@
 {
 "redirects": [
     {
-    "source": "/(.*)", 
-    "has": [
-        {
-        "type": "header",
-        "key": "x-forwarded-host",
-        "value": "^(?!delahaye\\.vercel\\.app).*$"
-        }
-    ],
+    "source": "/:path+",
     "destination": "/",
     "permanent": false
     }
