@@ -1,0 +1,17 @@
+{
+    "redirects": [
+      {
+        "source": "/(.*)",
+        "has": [
+          {
+            "type": "header",
+            "key": "referer",
+            "value": "^https://delahaye\\.vercel\\.app/"
+          }
+        ],
+        "destination": "/",
+        "permanent": false
+      }
+    ]
+  }
+  
