@@ -263,7 +263,7 @@ body > .share-container .share .icons { font-size: 20px; line-height: 50px; }
     transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-.twitter-share-container .twitter-share .icons { font-size: 30px; line-height: 50px; }
+.twitter-share-container .twitter-share .icons { font-size: 30px; line-height: 50px; color: #fff; }
 
 /* Style for the FontAwesome Twitter Icon */
 .twitter-share-container .twitter-share .fa-twitter {
